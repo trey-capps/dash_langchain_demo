@@ -1,7 +1,7 @@
 from dash import html
 
 def generate_backlog_item(item):
-    html.Div(
+    return html.Div(
         [
             html.Div(item, style={'flex': 1}),
             html.Div([html.Button("Yes", id=f"yes_{item}"),

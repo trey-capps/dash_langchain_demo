@@ -56,8 +56,15 @@ def main(params):
         )
 
 if __name__ == '__main__':
+    default_config_path = "./config.yaml"
+
     parser = argparse.ArgumentParser(description="Update data extraction for app of choice")
-    parser.add_argument('--config_path', required=True, help='Path to configuration file')
+    parser.add_argument(
+        '--config_path', 
+        default=default_config_path, 
+        required=False, 
+        help='Path to configuration file'
+    )
 
     params = parser.parse_args()
     main(params)
